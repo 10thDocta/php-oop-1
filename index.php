@@ -14,6 +14,11 @@ class User {
         $this->email = $email;
     }
 
+    public function compleanno($numb) {
+        $this->age += $numb;
+        return $this->age;
+    }
+
 }
 
 $user1 = new User('Pippo', 'Franco', 80, 'pippo@p.it');
@@ -52,6 +57,7 @@ $arrUser = [$user1, $user2, $user3, $user4];
             <li class="user-list__item"> <?php echo "Nome: " . $user->name ?> </li>
             <li class="user-list__item"> <?php echo "Cognome: " . $user->lastname ?> </li>
             <li class="user-list__item"> <?php echo "Età: " . $user->age ?> </li>
+            <li class="user-list__item"> <?php echo "Età + 5: " . $user->compleanno(5) ?> </li>
             <li class="user-list__item"> <?php echo "Email: " . $user->email ?> </li>
             <br>
         </ul>
