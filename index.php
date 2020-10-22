@@ -33,6 +33,12 @@ $arrUser = [$user1, $user2, $user3, $user4];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     ul {
         list-style: none;
     }
@@ -43,10 +49,10 @@ $arrUser = [$user1, $user2, $user3, $user4];
     <?php foreach ($arrUser as $user) { ?>
     <div class="user">
         <ul class="user-list">
-            <li class="user-list__item"> <?php echo $user->name ?> </li>
-            <li class="user-list__item"> <?php echo $user->lastname ?> </li>
-            <li class="user-list__item"> <?php echo $user->age ?> </li>
-            <li class="user-list__item"> <?php echo $user->email ?> </li>
+            <li class="user-list__item"> <?php echo "Nome: " . $user->name ?> </li>
+            <li class="user-list__item"> <?php echo "Cognome: " . $user->lastname ?> </li>
+            <li class="user-list__item"> <?php echo "Età: " . $user->age ?> </li>
+            <li class="user-list__item"> <?php echo "Email: " . $user->email ?> </li>
             <br>
         </ul>
     </div>
