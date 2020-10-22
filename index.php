@@ -25,13 +25,32 @@ $arrUser = [$user1, $user2, $user3, $user4];
 // var_dump($arrUser);
 ?>
 
-<?php foreach ($arrUser as $user) { ?>
-<div class="user">
-    <u class="user-list" style="list-style:none">
-        <li class="user-list__item"> <?php echo $user->name ?> </li>
-        <li class="user-list__item"> <?php echo $user->lastname ?> </li>
-        <li class="user-list__item"> <?php echo $user->age ?> </li>
-        <li class="user-list__item"> <?php echo $user->email ?> </li>
-    </u>
-</div>
-<?php } ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    ul {
+        list-style: none;
+    }
+    </style>
+</head>
+
+<body>
+    <?php foreach ($arrUser as $user) { ?>
+    <div class="user">
+        <ul class="user-list">
+            <li class="user-list__item"> <?php echo $user->name ?> </li>
+            <li class="user-list__item"> <?php echo $user->lastname ?> </li>
+            <li class="user-list__item"> <?php echo $user->age ?> </li>
+            <li class="user-list__item"> <?php echo $user->email ?> </li>
+            <br>
+        </ul>
+    </div>
+    <?php } ?>
+</body>
+
+</html>
